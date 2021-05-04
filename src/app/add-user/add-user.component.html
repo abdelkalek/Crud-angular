@@ -1,0 +1,25 @@
+<div class="content">
+  <form [formGroup]="userForm" (ngSubmit)="onFormSubmit()" class="ui form">
+    <div class="ui fluid input">
+      <div class="ui big label"> First Name </div>
+      <input type="text" formControlName="firstName" placeholder="first Name" [formControl]="userForm.get('firstName')">
+    </div>
+    <div class="ui divider"></div>
+    <div class="ui fluid input">
+      <div class="ui big label"> last Name </div>
+      <input type="text" formControlName="lastName" placeholder="last Name" [formControl]="userForm.get('lastName')">
+    </div>
+    <div class="ui divider"></div>
+    <div class="ui fluid input">
+      <div class="ui big label"> Login </div>
+      <input type="text" formControlName="login" placeholder="Login" [formControl]="userForm.get('login')">
+    </div>
+    <div class="ui divider"></div>
+    <div class="ui fluid input">
+      <div class="ui big label"> Password </div>
+      <input type="password" formControlName="pwd" placeholder="Password" [formControl]="userForm.get('pwd')">
+    </div>
+    <div class=" ui divider"></div>
+    <div class="ui center"> <button class="ui submit button primary">Submit</button> </div>
+  </form>
+</div>

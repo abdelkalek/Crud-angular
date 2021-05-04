@@ -1,0 +1,29 @@
+<table class="ui celled blue table">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Login </th>
+    <th>Password</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+<tbody>
+<tr *ngFor="let user of users">
+  <td data-label="ID">{{user.id}}</td>
+  <td data-label="firs name">{{user.firstName}}</td>
+  <td data-label="last name">{{user.lastName}}</td>
+  <td data-label="login name">{{user.login}}</td>
+  <td data-label="password name">{{user.pwd}}</td>
+  <td data-label="actions">
+    <div class="ui buttons">
+      <button (click)="delete(user.id)"  class="ui red basic button"><i class="trash alternate icon"></i>
+      </button>
+      <a class="ui green basic button"  [routerLink]="['/update',user.id]"><i class="pencil alternate icon"></i>
+      </a>
+    </div>
+  </td>
+</tr>
+</tbody>
+</table>
