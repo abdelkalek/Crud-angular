@@ -1,9 +1,17 @@
 <div class="ui container">
-  <div class="ui secondary pointing menu">
-    <a routerLink="/" class="item">Afficher</a>
-    <a routerLink="/add" class="item">Ajouter</a>
+  <br>
+  <div class="ui   inverted segment">
+    <div class="ui massive inverted secondary menu">
+      <a routerLink="/" class="item">Afficher</a>
+      <a routerLink="/add" class="item">Ajouter</a>
+      <div class="ui small icon input">
+        <input type="text" placeholder="Search small..." [(ngModel)]="serch"  name="serchtxt">
+        <i class="search icon"></i>
+      </div>
+      <a [routerLink]="['/find',serch]" class="item">Chercher</a>
+    </div>
   </div>
-</div>
-<div class="ui segment">
-  <router-outlet></router-outlet>
+  <div class="ui segment">
+    <router-outlet></router-outlet>
+  </div>
 </div>

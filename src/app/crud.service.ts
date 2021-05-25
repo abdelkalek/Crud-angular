@@ -27,6 +27,10 @@ export class CrudService {
   getuser(id: number) {
     return this.http.get(this.rootUrl + '/find/' + id);
   }
+  // get  user method using httpClient
+  getuserbyname(name: string) {
+    return this.http.get(this.rootUrl + '/recherche/' + name);
+  }
   // add User httpClient
   postuser(user: Users) {
     return this.http.post(this.rootUrl + '/add', {
@@ -51,4 +55,6 @@ export class CrudService {
       });
 
   }
+
+
 }
